@@ -12,12 +12,12 @@ for d in $(ls); do stow $d; done
 # set -o errexit    # exit when command fails
 
 # Install latest nodejs
-if [ ! -x "$(command -v node)" ]; then
-    curl --fail -LSs https://install-node.now.sh/latest | sh
-    export PATH="/usr/local/bin/:$PATH"
-    # Or use package manager, e.g.
+#if [ ! -x "$(command -v node)" ]; then
+#    curl --fail -LSs https://install-node.now.sh/latest | sh
+#    export PATH="/usr/local/bin/:$PATH"
+#    # Or use package manager, e.g.
     # sudo apt-get install nodejs
-fi
+#fi
 
 # Use package feature to install coc.nvim
 
@@ -35,13 +35,13 @@ then
 fi
 
 # Change extension names to the extensions you need
-npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+#npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
 # Install Rust and binaries
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install Rust utilities
-~/.cargo/bin/cargo install git-delta ripgrep lsd fd-find hexyl bat exa alacritty
+#~/.cargo/bin/cargo install git-delta ripgrep lsd fd-find hexyl bat exa alacritty
 
 # Install vim plugins
 /usr/bin/nvim +PluginInstall
